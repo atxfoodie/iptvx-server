@@ -8,6 +8,6 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./config:/config
+      - /mediaserver/iptvx-server/config/:/config
     environment:
       - TZ=America/Chicago # Set to your local time zone
