@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  iptvx-server:
+    build: .
+    container_name: iptvx-media-server
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config:/config
+    environment:
+      - TZ=America/Chicago # Set to your local time zone
